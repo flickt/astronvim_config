@@ -1,6 +1,30 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
-    -- ensure_installed = { "lua" },
+    ensure_installed = {
+      "lua",
+      "c",
+      "vim",
+      "vimdoc",
+      "query",
+      -- lua, c, vim, vimdoc, and query should always be included
+      "comment",
+      "c_sharp",
+      "css",
+      "diff",
+      "dockerfile",
+      "git_rebase",
+      "gitattributes",
+      "gitcommit",
+      "gitignore",
+      "html",
+      "http",
+      "javascript",
+      "json",
+      "python",
+      "regex",
+      "sql",
+      "yaml",
+    },
   },
 }
