@@ -10,7 +10,7 @@ return {
         "diagnosticls",
         -- "emmet_ls",
         "cssmodules_ls", -- vscode css lsp
-        "rome",          -- JavaScript, TypeScript, JSON, soon to support HTML, CSS, and Markdown
+        "rome", -- JavaScript, TypeScript, JSON, soon to support HTML, CSS, and Markdown
         "html",
         "bashls",
         "pyright",
@@ -28,6 +28,8 @@ return {
       ensure_installed = {
         "stylua",
         "pylama",
+        "stylelint", -- css
+        "prettier", -- pretty printer
       },
     },
   },
