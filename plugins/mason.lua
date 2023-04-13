@@ -10,13 +10,15 @@ return {
         "diagnosticls",
         -- "emmet_ls",
         "cssmodules_ls", -- vscode css lsp
-        "rome", -- JavaScript, TypeScript, JSON, soon to support HTML, CSS, and Markdown
+        "rome",          -- JavaScript, TypeScript, JSON, soon to support HTML, CSS, and Markdown
         "html",
         "bashls",
         "pyright",
         "omnisharp",
         "sqlls",
         "marksman", -- markdown
+        "lemminx",  -- xml
+        "yamlls",
       },
     },
   },
@@ -29,7 +31,7 @@ return {
         "stylua",
         "pylama",
         "stylelint", -- css
-        "prettier", -- pretty printer
+        "prettier",  -- pretty printer
       },
     },
   },
