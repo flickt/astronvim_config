@@ -53,7 +53,7 @@ return {
       html = {
         -- HACK: add razor filetype to html server
         -- TODO: extend init_options table to include c# in embeddedLanguages
-        -- TODO: write razor lsp to include omnisharp
+        -- TODO: extend luasnip to enable html snippet completion in razor files
         filetypes = { "html", "razor" },
       },
     },
@@ -91,6 +91,16 @@ return {
       group = vim.api.nvim_create_augroup("razor_config", { clear = true }),
       callback = function()
         if vim.bo.ft == "razor" then vim.treesitter.start(vim.fn.bufnr(), "html") end
+      end,
+    })
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "razor", "html", "css", "javascript" },
+      desc = "Change indentation for webdev languages to 2 spaces instead of four",
+      group = vim.api.nvim_create_augroup("autoindentation", { clear = true }),
+      callback = function()
+        vim.bo.tabstop = 2
+        vim.bo.softtabstop = 2
+        vim.bo.shiftwidth = 2
       end,
     })
     -- Set up custom filetypes
