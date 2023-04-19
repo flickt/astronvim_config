@@ -32,6 +32,7 @@ return {
         "pylama",
         "stylelint", -- css
         "prettier",  -- pretty printer
+        "csharpier",
       },
     },
   },
