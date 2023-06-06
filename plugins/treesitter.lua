@@ -22,6 +22,7 @@ return {
       "html",
       "http",
       "javascript",
+      "typescript",
       "json",
       "python",
       "regex",
