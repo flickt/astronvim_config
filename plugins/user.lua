@@ -1,7 +1,8 @@
 return {
   -- {
-  --   WARNING todo-comments.nvim is included in plugins/community.lua
+  --   WARNING: todo-comments.nvim is included in plugins/community.lua
   --   this just demonstrates how to add new plugins
+  --
   --   "folke/todo-comments.nvim",
   --   dependencies = { "nvim-lua/plenary.nvim" },
   --   config = function() require("todo-comments").setup {} end,
