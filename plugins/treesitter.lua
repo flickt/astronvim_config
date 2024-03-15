@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
+    indent = { enable = false }, -- WARN: treesitter indent was buggy with html
     ensure_installed = {
       "lua",
       "c",
@@ -26,7 +27,9 @@ return {
       "json",
       "python",
       "regex",
+      "rust",
       "sql",
+      "scss",
       "yaml",
     },
   },
