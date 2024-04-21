@@ -1,36 +1,43 @@
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
+-- Customize Treesitter
+
+---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
-  opts = {
-    indent = { enable = false }, -- WARN: treesitter indent was buggy with html
-    ensure_installed = {
-      "lua",
+  opts = function(_, opts)
+    -- add more things to the ensure_installed table protecting against community packs modifying it
+    opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
       "c",
+      "lua",
+      "query",
       "vim",
       "vimdoc",
-      "query",
-      -- lua, c, vim, vimdoc, and query should always be included
-      "comment",
+      -- above should always be installed
       "c_sharp",
+      "comment",
       "css",
-      "diff",
       "devicetree",
+      "diff",
       "dockerfile",
-      "git_rebase",
       "git_config",
+      "git_rebase",
       "gitattributes",
       "gitcommit",
       "gitignore",
       "html",
       "http",
       "javascript",
-      "typescript",
       "json",
       "python",
       "regex",
       "rust",
-      "sql",
       "scss",
+      "sql",
+      "typescript",
       "yaml",
-    },
-  },
+    })
+    opts.indent = { enable = false }
+    -- return opts
+  end,
 }
