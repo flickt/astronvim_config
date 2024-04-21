@@ -9,14 +9,15 @@ return {
         "angularls",
         "lua_ls",
         "diagnosticls",
+        "cssls",
         -- "emmet_ls",
         -- "cssmodules_ls", -- vscode css lsp
-        "rome", -- JavaScript, TypeScript, JSON, soon to support HTML, CSS, and Markdown
         "html",
         "bashls",
         "pyright",
         "omnisharp",
         "sqlls",
+        "rust_analyzer",
         "marksman", -- markdown
         "lemminx", -- xml
         "yamlls",
@@ -31,6 +32,10 @@ return {
       ensure_installed = {
         "stylua",
         "pylama",
+        "ltrs", -- LanguageTool-Rust
+        "prettier",
+        "markuplint",
+        "xo",
       },
     },
   },
