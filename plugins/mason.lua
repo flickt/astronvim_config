@@ -36,9 +36,10 @@ return {
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
         "ltrs", -- language-tool-rust
         "markuplint",
+        -- "pylama", WARN: deprecated, see https://github.com/nvimtools/none-ls.nvim/discussions/81
+        "ruff",
         "prettier",
         "stylua",
-        "xo",
         -- add more arguments for adding more null-ls sources
       })
     end,
